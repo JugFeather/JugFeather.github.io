@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>News</title>
+
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/mescroll.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+           
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }   
+
+            
+    </style>
+</head>
+
+<body>
+    
+
+    <!--滑动区域-->
+    <div id="mescroll" class="mescroll" >
+        <div class="nav">
+
+            <ul>
+                <li class="logo"><a href="home.html"><img class="logo" src="./images/logo.png"></a></li>
+
+                <li><a class="home list" href="home.html">Home</a></li>
+                <li><a class="list" href="people.html">People</a></li>
+                <li><a class="list" href="news.html">News</a></li>
+                <li><a class="list" href="publications.html">Publications</a></li>
+                <li><a class="list" href="competitions.html">Competitions</a></li>
+                <li><a class="list" href="grants.html">Grants</a></li>
+                <li><a class="list" href="resources.html">Resources</a></li>
+                <li><a class="list" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+       
+        <div class="container">
+            <div>
+                <p class="title0">NEWS</p>
+                <div class="vector0"></div>
+            </div>
+        </div>
+  
+        <!--展示上拉加载的数据列表-->
+        <div id="dataList" >
+        </div>
+        
+    </div>  
+    <!--
+        <div id="result"></div>
+        <div id="remind"></div>
+        -->
+</body>
+
+<!--
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.getJSON('./data/news.txt', function (data) {
+                var news = "<div class='news-item'>";
+               
+                $.each(data, function (i, n) {
+                  
+                    news += "<div class='news2'>" + "<div class='date1.2'>" + n["date"] + "</div>" + "<div class='title1.2'>" + n["title"] + "</div>" + "<div class='content1.2'>" +n["content"] + "</div>" + "<div class='box_shadow1.2'>" + "<img src='./images/2.png' class='img1'>" + "</div>" + "<button class='btn-6 btn2'>" +"<span>" + "<a href='https://v2.imag-njust.net/news/info/23/'>more</a>" + "</span>" +"</button>" + "</div>" ;
+                });
+                news += "<div class='height'></div>" + "<p class='remind'>- 暂时没有更多内容 -</p>" +"<div class='height'></div>" + "<div class='footer'><p>Copyright © 2022 南京理工大学智能媒体分析实验室.All rights reserved.</p></div>" + "</div>" ;
+                $('#result').append(news);
+         
+            });
+
+
+           
+            return false;
+        });
+    </script>
+    -->
+
+<script src="./lib/mescroll.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+
+    $(function () {
+        //创建MeScroll对象,内部已默认开启下拉刷新,自动执行up.callback,重置列表数据;
+        var mescroll = new MeScroll("mescroll", {
+            up: {
+                callback: getListData, //上拉回调,此处可简写; 相当于 callback: function (page) { getListData(page); }
+                isBounce: false, //此处禁止ios回弹,解析(务必认真阅读,特别是最后一点): http://www.mescroll.com/qa.html#q10
+                clearEmptyId: "dataList", //1.下拉刷新时会自动先清空此列表,再加入数据; 2.无任何数据时会在此列表自动提示空
+                toTop: { //配置回到顶部按钮
+                    src: "./images/mescroll-totop.png", //默认滚动到1000px显示,可配置offset修改
+                    //offset : 1000
+                },
+                lazyLoad: {
+                    use: true // 是否开启懒加载,默认false
+                }
+            }
+        });
+
+        /*联网加载列表数据  page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数 */
+        function getListData(page) {
+            //联网加载数据
+            getListDataFromNet(page.num, page.size, function (curPageData) {
+                //联网成功的回调,隐藏下拉刷新和上拉加载的状态;
+                //mescroll会根据传的参数,自动判断列表如果无任何数据,则提示空;列表无下一页数据,则提示无更多数据;
+                console.log("page.num=" + page.num + ", page.size=" + page.size +
+                    ", curPageData.length=" +
+                    curPageData.length);
+
+                mescroll.endSuccess(curPageData.length);
+
+                //设置列表数据,因为配置了emptyClearId,第一页会清空dataList的数据,所以setListData应该写在最后;
+                setListData(curPageData, page.num);
+              
+            }, function () {
+                //联网失败的回调,隐藏下拉刷新和上拉加载的状态;
+                mescroll.endErr();
+            });
+        }
+
+        /*设置列表数据*/
+        function setListData(curPageData, pagenum) {
+             var listDom = document.getElementById("dataList");
+
+            if(pagenum == 1) {              
+                 var first = curPageData[0];
+                 var date = first.date;
+                 var time = {};
+                 var f = date.split(' ', 2); //过滤空格
+                 if (f[0].search("/") != -1) { //判断是否包含-
+                 var d = (f[0] ? f[0] : '').split('/', 3); //过滤-
+                 } else {
+                 var d = (f[0] ? f[0] : '').split('-', 3); //过滤-
+                 }
+                 time.year = parseInt(d[0]); //转换成整数形式的原因是 过滤掉 月份和时分秒的首位补零的情况
+                 time.month = parseInt(d[1]);
+                 time.day = parseInt(d[2]);
+
+
+
+
+                var str1 = '<p class="title1">Latest</p>';
+                    str1 +='<div class="news1">';
+                    str1 += '<div class="day">' + time.day + '</div>';
+                    str1 += '<div class="mon">' + time.month + '月</div>';
+                    str1 += '<div class="box_shadow">' + '<img class="img1" imgurl="' + first.img + '" />' + '</div>';
+                    str1 += '<div class="title1.1">' + first.title + '</div>';
+                    str1 += '<div class="content1.1">' + first.content + '</div>';
+                    str1 += '<button class="btn-6 btn1">' +'<span>' + '<a href="https://v2.imag-njust.net/news/info/23/">more</a>' + '</span>' + '</button>';
+                    str1 += '</div>'
+                     
+                    var liDom1=document.createElement("div");
+                    liDom1.innerHTML=str1;
+                    listDom.appendChild(liDom1);
+
+
+
+                     for (var i = 1; i < curPageData.length; i++) { 
+                        var pd=curPageData[i]; var
+                         str='<div class="box_shadow1.2">' + '<img class="img1" imgurl="' + pd.img + '" />' + '</div>' ;
+                         str +='<p class="title1.2">' + pd.title + '</p>' ; str +='<p class="content1.2">' + pd.content
+                         + '</p>' ; str +='<p class="date1.2">' + pd.date + '</p>' ; str +='<button class="btn-6 btn2">'
+                         +'<span>' + '<a href="https://v2.imag-njust.net/news/info/23/">more</a>' + '</span>' +
+                         '</button>';
+
+
+                         var liDom=document.createElement("div");
+                         liDom.innerHTML='<div class="news2">' + str;
+                             listDom.appendChild(liDom);
+
+                             }
+
+            }
+
+            else {
+                for (var i = 0; i < curPageData.length; i++) { var pd=curPageData[i]; var
+                    str='<div class="box_shadow1.2">' + '<img class="img1" imgurl="' + pd.img + '" />' + '</div>' ; str
+                    +='<p class="title1.2">' + pd.title + '</p>' ; str +='<p class="content1.2">' + pd.content + '</p>'
+                    ; str +='<p class="date1.2">' + pd.date + '</p>' ; str +='<button class="btn-6 btn2">' +'<span>' +
+                    '<a href="https://v2.imag-njust.net/news/info/23/">more</a>' + '</span>' +
+                    '</button>';
+
+
+                    var liDom=document.createElement("div");
+                    liDom.innerHTML='<div class="news2">' + str;
+                    listDom.appendChild(liDom);
+
+                        }
+
+            }
+           
+
+        }
+
+        var dataTag = 1;
+        
+
+        /*联网加载列表数据
+         在您的实际项目中,请参考官方写法: http://www.mescroll.com/api.html#tagUpCallback
+         请忽略getListDataFromNet的逻辑,这里仅仅是在本地模拟分页数据,本地演示用
+         实际项目以您服务器接口返回的数据为准,无需本地处理分页.
+         * */
+        function getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) {
+            //延时一秒,模拟联网
+            setTimeout(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: './data/newsList.json',
+                    dataType: 'json',
+                    success: function (data) {
+                        //模拟分页数据
+                        var listData = [];
+                        for (var i = (pageNum - 1) * pageSize; i < pageNum *
+                            pageSize; i++) {
+                            if (i == data.length) break;
+                            listData.push(data[i]);
+                        }
+                        successCallback(listData);
+                    },
+                    error: errorCallback
+                });
+            }, 1000)
+        }
+
+    });
+</script>
+
+</html>

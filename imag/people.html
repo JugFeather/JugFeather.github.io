@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <link rel="stylesheet" href="css/people.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <script src="./lib/lazysizes.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 1280px;
+            background-color: #f1f1f1;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="top_image nav">
+        <ul>
+            <li class="logo">
+                <a href="home.html"><img class="logo" src="./images/logo.png" /></a>
+            </li>
+
+            <li><a class="home list" href="home.html">Home</a></li>
+            <li><a class="list" href="people.html">People</a></li>
+            <li><a class="list" href="news.html">News</a></li>
+            <li><a class="list" href="publications.html">Publications</a></li>
+            <li><a class="list" href="competitions.html">Competitions</a></li>
+            <li><a class="list" href="grants.html">Grants</a></li>
+            <li><a class="list" href="resources.html">Resources</a></li>
+            <li><a class="list" href="contact.html">Contact</a></li>
+        </ul>
+
+        <h1 style="position: absolute;top: 155px;left: 35%;color: white;margin: 0;">WELCOME TO OUR TEAM!</h1>
+        <div class="vector"></div>
+    </div>
+
+    <div class="card">
+        <button class="btn btn1" style="left: 80px;"><a href=" #">FAULTY</a></button>
+        <button class="btn btn2" style="left: 150px; "><a href="people2.html">CANDIDATE</a></button>
+
+        <h2 style="position:relative; top:50px; text-align: center;">Faulty</h2>
+        <div class="vector2"></div>
+        <div id="result1"></div>
+
+
+        <h2 style="position:relative; top:130px; text-align: center;">Associated Faculty</h2>
+        <div class="vector3"></div>
+        <div id="result2"></div>
+
+    </div>
+
+
+    <!--底部-->
+    <div class="footer footer1" style="margin-top:40px;">
+        <p>Copyright © 2022 南京理工大学智能媒体分析实验室. All rights reserved.</p>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.getJSON('./data/faculty.json', function (data) {
+            var f = '<div class="grid-container">';
+
+            $.each(data, function (i, n) {
+                if (i < 3) {
+                    f += ' <div class="grid-item" style="padding-top: 0;">' +
+                        '<div class="card-container"><div class="cover">' +
+                        '<img data-src="' + n["img"] +
+                        '" class="lazyload p" width="150" height="150" />' +
+                        '<p class="name">' + n["name"] + '<br><span style="font-size: 18px;">' +
+                        n["Ename"] +
+                        '</span><br><span style="color: #faf24b;font-size: 20px;">' + n[
+                        "title"] + '</span></p>' +
+                        '<iconify-icon icon="ic:outline-ads-click" style="color: white;position:absolute;top:200px;" width="38" height="38"></iconify-icon></div>' +
+
+                        '<div class="back"><p class="intro">' + n["intro"] +
+                        '</p><button class="btn3"><a href="' + n["src"] +
+                        '">learn more-></a></button></div></div></div>';
+
+                } else {
+                    f += ' <div class="grid-item">' +
+                        '<div class="card-container"><div class="cover">' +
+                        '<img data-src="' + n["img"] +
+                        '" class="lazyload p" width="150" height="150" />' +
+                        '<p class="name">' + n["name"] + '<br><span style="font-size: 18px;">' +
+                        n["Ename"] +
+                        '</span><br><span style="color: #faf24b;font-size: 20px;">' +
+                        n["title"] + '</span></p>' +
+                        '<iconify-icon icon="ic:outline-ads-click" style="color: white;position:absolute;top:200px;" width="38" height="38"></iconify-icon></div>' +
+
+                        '<div class="back"><p class="intro">' + n["intro"] +
+                        '</p><button class="btn3"><a href="' + n["src"] +
+                        '">learn more-></a></button></div></div></div>';
+                }
+
+            });
+
+            f += '</div>';
+            $('#result1').append(f);
+
+
+        });
+
+
+        $.getJSON('./data/assFaculty.json', function (data) {
+            var a = '<div class="grid-container">';
+
+            $.each(data, function (i, n) {
+                a += ' <div class="grid-item">' +
+                    '<div class="card-container"><div class="cover">' +
+                    '<img data-src="' + n["img"] +
+                    '" class="lazyload p" width="150" height="150" />' +
+                    '<p class="name">' + n["name"] + '<br><span style="font-size: 18px;">' + n[
+                        "Ename"] +
+                    '</span><br><span style="color: #faf24b;font-size: 20px;">' + n["title"] +
+                    '</span></p>' +
+                    '<iconify-icon icon="ic:outline-ads-click" style="color: white;position:absolute;top:200px;" width="38" height="38"></iconify-icon></div>' +
+
+                    '<div class="back"><p class="intro">' + n["intro"] +
+                    '</p><button class="btn3"><a href="' + n["src"] +
+                    '">learn more-></a></button></div></div></div>';
+
+            });
+
+            a += '</div>';
+            $('#result2').append(a);
+
+        });
+
+        return false;
+    });
+</script>
+
+
+
+
+
+</html>

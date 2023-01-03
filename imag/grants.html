@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grants</title>
+
+    <link rel="stylesheet" href="css/grants.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="./css/mescroll.min.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 1280px;
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body> 
+    <!--表-
+    <h2 style="position: relative; left: 130px; width: 100px;">Grants</h2>
+
+    <p class="th1">序号<span class="th2">项目</span></p>
+
+    <div id="result"></div>
+    -->
+<!--滑动区域-->
+<div id="mescroll" class="mescroll">
+    <div class="top_image nav">
+        <ul>
+            <li class="logo">
+                <a href="home.html"><img class="logo" src="./images/logo.png" /></a>
+            </li>
+
+            <li><a class="home list" href="home.html">Home</a></li>
+            <li><a class="list" href="people.html">People</a></li>
+            <li><a class="list" href="news.html">News</a></li>
+            <li><a class="list" href="publications.html">Publications</a></li>
+            <li><a class="list" href="competitions.html">Competitions</a></li>
+            <li><a class="list" href="grants.html">Grants</a></li>
+            <li><a class="list" href="resources.html">Resources</a></li>
+            <li><a class="list" href="contact.html">Contact</a></li>
+        </ul>
+
+        <h1 style="position: absolute;top: 85px;left: 40%;color: white;margin: 0;">Congratulations!</h1>
+    </div>
+
+    <h2 style="position: relative; left: 130px; width: 100px;">Grants</h2>
+
+    <p class="th1">序号<span class="th2">项目</span></p>
+
+    <!--展示上拉加载的数据列表-->
+    <div id="dataList">
+    </div>
+</div>
+
+
+</body>
+<!--
+ <script type="text/javascript">
+     $(document).ready(function () {
+
+         $.getJSON('./data/grants.txt', function (data) {
+             var news = "<div>";
+
+             $.each(data, function (i, n) {
+
+                 news += "<div class='card'>" +
+                     "<div class='num'>" + n["id"] + "</div>" +
+                     "<div class='content'>" + n["content"] + "</div>" +
+                     "</div>";
+             });
+
+             news += "<div class='height'></div>" + "<p class='remind'>- 加载更多 -</p>" +
+                 "<div class='height'></div>" +
+                 "<div class='footer'><p>Copyright © 2022 南京理工大学智能媒体分析实验室.All rights reserved.</p></div>" +
+                 "</div>";
+             $('#result').append(news);
+
+         });
+
+
+
+         return false;
+     });
+ </script>
+-->
+<script src="./lib/mescroll.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        //创建MeScroll对象,内部已默认开启下拉刷新,自动执行up.callback,重置列表数据;
+        var mescroll = new MeScroll("mescroll", {
+            up: {
+                callback: getListData, //上拉回调,此处可简写; 相当于 callback: function (page) { getListData(page); }
+                isBounce: false, //此处禁止ios回弹,解析(务必认真阅读,特别是最后一点): http://www.mescroll.com/qa.html#q10
+                clearEmptyId: "dataList", //1.下拉刷新时会自动先清空此列表,再加入数据; 2.无任何数据时会在此列表自动提示空
+                toTop: { //配置回到顶部按钮
+                    src: "./images/mescroll-totop.png", //默认滚动到1000px显示,可配置offset修改
+                    //offset : 1000
+                },
+                lazyLoad: {
+                    use: true // 是否开启懒加载,默认false
+                }
+            }
+        });
+
+        /*联网加载列表数据  page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数 */
+        function getListData(page) {
+            //联网加载数据
+            getListDataFromNet(page.num, page.size, function (curPageData) {
+                //联网成功的回调,隐藏下拉刷新和上拉加载的状态;
+                //mescroll会根据传的参数,自动判断列表如果无任何数据,则提示空;列表无下一页数据,则提示无更多数据;
+                console.log("page.num=" + page.num + ", page.size=" + page.size +
+                    ", curPageData.length=" +
+                    curPageData.length);
+
+                mescroll.endSuccess(curPageData.length);
+
+                //设置列表数据,因为配置了emptyClearId,第一页会清空dataList的数据,所以setListData应该写在最后;
+                setListData(curPageData);
+                
+            }, function () {
+                //联网失败的回调,隐藏下拉刷新和上拉加载的状态;
+                mescroll.endErr();
+            });
+        }
+
+        /*设置列表数据*/
+        function setListData(curPageData) {
+            var listDom = document.getElementById("dataList");
+
+            for (var i = 0; i < curPageData.length; i++) {
+                var pd = curPageData[i];
+                var str = "<div class='card'>";
+                str += "<div class='num'>" + pd.id + "</div>";
+                str += "<div class='content-box'><div class='content'>" + pd.content + "</div></div>" + "</div>";
+
+
+                var liDom = document.createElement("div");
+                liDom.innerHTML = str;
+                listDom.appendChild(liDom);
+
+            }
+
+        }
+
+        var dataTag = 1;
+
+
+        /*联网加载列表数据
+         在您的实际项目中,请参考官方写法: http://www.mescroll.com/api.html#tagUpCallback
+         请忽略getListDataFromNet的逻辑,这里仅仅是在本地模拟分页数据,本地演示用
+         实际项目以您服务器接口返回的数据为准,无需本地处理分页.
+         * */
+        function getListDataFromNet(pageNum, pageSize, successCallback, errorCallback) {
+            //延时一秒,模拟联网
+            setTimeout(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: './data/grants.json',
+                    dataType: 'json',
+                    success: function (data) {
+                        //模拟分页数据
+                        var listData = [];
+                        for (var i = (pageNum - 1) * pageSize; i < pageNum *
+                            pageSize; i++) {
+                            if (i == data.length) break;
+                            listData.push(data[i]);
+                        }
+                        successCallback(listData);
+                    },
+                    error: errorCallback
+                });
+            }, 1000)
+        }
+
+    });
+</script>
+
+
+</html>
