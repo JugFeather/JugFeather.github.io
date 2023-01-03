@@ -1,0 +1,74 @@
+[
+	{
+		"img": "../images/f1.jpg",
+		"name": "唐金辉",
+		"Ename": "Jinhui Tang",
+        "title": "Professor",
+        "intro": "唐金辉，教授，南京理工大学计算机科学与工程学院院长",
+        "src": "https://v2.imag-njust.net/people/user/tangjinhui"
+	}, {
+		"img": "../images/f2.jpg",
+		"name": "李泽超",
+		"Ename": "Zechao Li",
+        "title": "Professor",
+        "intro": "南京理工大学计算机科学与工程学院教授、博士生导师，工信部“社会安全信息感知与系统”重点实验室副主任。",
+        "src": "https://v2.imag-njust.net/people/user/lizechao"
+	}, {
+		"img": "../images/f3.jpg",
+		"name": "潘金山",
+		"Ename": "Jinshan Pan",
+        "title": "Professor",
+        "intro": "潘金山，南京理工大学教授，于2017获得大连理工大学数学科学学院博士学位。",
+        "src": "https://v2.imag-njust.net/people/user/panjinshan"
+	}, {
+		"img": "../images/f4.jpg",
+		"name": "舒祥波",
+		"Ename": "Xiangbo Shu",
+        "title": "Professor",
+        "intro": "南京理工大学计算机科学与工程学院教授、研究生导师。研究方向为多媒体计算、计算机视觉、深度学习。",
+        "src": "https://v2.imag-njust.net/people/user/shuxiangbo"
+	}, {
+		"img": "../images/f5.jpg",
+		"name": "董姜鑫",
+		"Ename": "Jiangxin Dong",
+        "title": "Professor",
+        "intro": "董姜鑫，南京理工大学教授，曾任德国马克斯普朗克研究所信息所博士后研究员,在国际权威期刊和会议上发表论文10余篇。",
+        "src": "https://v2.imag-njust.net/people/user/dongjiangxin"
+	}, {
+		"img": "../images/f6.jpg",
+		"name": "项欣光",
+		"Ename": "Xinguang Xiang",
+        "title": "Associate Professor",
+        "intro": "项欣光博士一直从事视频处理，压缩与通讯，智能媒体分析、图像处理等方向的研究工作，发表国际学术论文30余篇。",
+        "src": "https://v2.imag-njust.net/people/user/xiangxinguang"
+	}, {
+		"img": "../images/f7.jpg",
+		"name": "孙运莲",
+		"Ename": "Yunlian Sun",
+        "title": "Associate Professor",
+        "intro": "南京理工大学计算机科学与工程学院副教授、硕士生导师。研究方向主要包括生物特征识别、模式识别、计算机视觉 等",
+        "src": "https://v2.imag-njust.net/people/user/sunyunlian"
+	}, {
+		"img": "../images/f8.jpg",
+		"name": "代龙泉",
+		"Ename": "Longquan Dai",
+        "title": "Associate Professor",
+        "intro": "2015年博士毕业于中科院自动化所模式识别国家重点实验室；研究方向为计算机视觉、机器学习。",
+        "src": "https://v2.imag-njust.net/people/user/dailongquan"
+	}, {
+		"img": "../images/f9.jpg",
+		"name": "杜晓宇",
+		"Ename": "Xiaoyu Du",
+        "title": "Associate Professor",
+        "intro": "杜晓宇，南京理工大学副教授，江苏省双创博士。研究兴趣包含多媒体计算、推荐系统、并行计算。",
+        "src": "https://v2.imag-njust.net/people/user/duxiaoyu"
+	}, {
+		"img": "../images/f10.jpg",
+		"name": "金露",
+		"Ename": "Lu Jin",
+        "title": "Associate Professor",
+        "intro": "南京理工大学计算机科学与工程学院在读博士，导师为唐金辉教授。研究兴趣包括多媒体分析，多媒体检索，深度学习，机器学习。",
+        "src": "https://v2.imag-njust.net/people/user/jinlu"
+	}
+	
+]
