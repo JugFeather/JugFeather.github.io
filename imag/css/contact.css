@@ -1,0 +1,134 @@
+.mask {
+    background: rgba(0, 0, 0, 0.17);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 580px;
+}
+
+.bac_image {
+    width: 100%;
+    height: 580px;
+    background: url("../images/7.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.word {
+    width: 326px;
+    color: rgba(253,246,255,1);
+    position: absolute;
+    top: 37%;
+    left: 52%;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+}
+
+.pic {
+    width: 188px;
+    height: 188px;
+    background: url("../images/8.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 37%;
+    left: 32%;
+    overflow: hidden;
+}
+
+.card {
+    width: 398px;
+    height: 398px;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 121px;
+    left: 657px;
+   
+
+}
+
+.card_body {
+    width: 398px;
+    height: 382px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    border: 3px solid rgba(231,231,231,1);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.25);
+    
+
+}
+
+.title {
+    position: absolute;
+    width: 290px;
+    height: 60px;
+    left: 40px;
+    top: 0px;
+    border-radius: 20px;
+    background: linear-gradient(93.88deg, #394865 -19.11%, #656DB1 44.19%, #9BAFCD 120.16%);
+    box-shadow: 5px 15px 20px #C4D2E6;
+    overflow: hidden;
+}
+
+.title2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 60px;
+    top: -10px;
+}
+
+form {
+ position: absolute;
+ left: 30px;
+ top: 80px;
+ color: #C0C0C0;
+ font-size: 15px;
+ font-weight: bold;
+}
+
+
+.email {
+    position: absolute;
+    left: 180px;
+    top: -2px;
+
+}
+
+textarea {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+     border-bottom: 2px solid silver;
+}
+
+
+.btn1 {
+    position: absolute;
+    left: 100px;
+    top: 0px;
+
+}
+
+.btn1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn1 a:visited {
+    text-decoration: none;
+    color: white;
+}

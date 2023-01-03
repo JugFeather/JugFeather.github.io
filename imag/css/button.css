@@ -1,0 +1,192 @@
+.custom-btn {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+
+
+ .btn-3 {
+     background: rgb(0, 172, 238);
+     background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, #58A0DB 100%);
+     width: 120px;
+     height: 45px;
+     line-height: 42px;
+     padding: 0;
+     border: none;
+     border-radius: 8px;
+
+ }
+
+ 
+
+.btn-6 {
+    display: inline-block;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    vertical-align:middle;
+}
+
+.btn-6 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-6 span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-6:hover span {
+    padding-right: 25px;
+}
+
+.btn-6:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+.btn-11 {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 18px;
+    padding: 10px 25px;
+
+    border: none;
+    background: rgb(33, 120, 251);
+    background: linear-gradient(0deg, rgb(33, 153, 251) 0%, rgb(76, 173, 234) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+
+.btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.btn-11:hover {
+    background: rgb(33, 154, 239);
+    background: linear-gradient(0deg, rgb(28, 96, 231) 0%, rgb(69, 142, 213) 100%);
+}
+
+.btn-11:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+.btn-12 {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 18px;
+    padding: 10px 25px;
+
+    border: none;
+    background: #656DB1;
+   background: linear-gradient(93.88deg, #394865 -19.11%, #656DB1 44.19%, #9BAFCD 120.16%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn-12:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.btn-12:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn-12:hover{
+     background: #656DB1;
+     background: linear-gradient(93.88deg, #2d3952 -19.11%, #545a93 44.19%, #7f8fa8 120.16%);
+}
+.btn-12:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+
+
+
+
+
