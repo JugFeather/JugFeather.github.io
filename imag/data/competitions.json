@@ -5,7 +5,7 @@
 "people":"沈飞，蒋鑫，陈嘉煜",
 "prize":"亚军",
 "teacher":"唐金辉，项欣光",
-"img":"../images/p1.jpg"
+"img":"./images/p1.jpg"
 }, 
 
 {"id":"2", 
@@ -14,7 +14,7 @@
 "people":"沈飞、蒋鑫、付孝德、陈嘉煜",
 "prize":"一等奖",
 "teacher":"唐金辉，杜晓宇",
-"img":"../images/p2.jpg"
+"img":"./images/p2.jpg"
 },  
 
 {"id":"3", 
@@ -23,7 +23,7 @@
 "people":"沈飞，Wang Zhe，Huang Zijun，付孝德，陈嘉煜",
 "prize":"第三名",
 "teacher":"唐金辉，杜晓宇",
-"img":"../images/p3.jpg"
+"img":"./images/p3.jpg"
 }, 
 
 {"id":"4", 
