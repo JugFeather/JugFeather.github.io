@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/details.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/button.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>People</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li class="logo"><a href="../home.html"><img class="logo" src="../images/logo.png"></a></li>
+
+            <li><a class="home list" href="../home.html">Home</a></li>
+            <li><a class="list" href="../people.html">People</a></li>
+            <li><a class="list" href="../news.html">News</a></li>
+            <li><a class="list" href="../publications.html">Publications</a></li>
+            <li><a class="list" href="../competitions.html">Competitions</a></li>
+            <li><a class="list" href="../grants.html">Grants</a></li>
+            <li><a class="list" href="../resources.html">Resources</a></li>
+            <li><a class="list" href="../contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div style="position: absolute;left: 4%;width: 90%;">
+        <p style="font-size: 25px; padding-top: 40px; text-align: center;">Yunlian Sun</p>
+    </div>
+    <div class="card">
+        <div id="result1"></div>
+    </div>
+
+
+
+    <div style="position:relative; top:150px;left: 120px;width: 1000px;">
+        <div id="result2"></div>
+    </div>
+
+    <div style="position:relative; top:150px;left: 120px;width: 1000px;">
+        <div id="result3"></div>
+    </div>
+
+
+    <div class="footer footer1">
+        <p>Copyright © 2022 南京理工大学智能媒体分析实验室. All rights reserved.</p>
+    </div>
+
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $.getJSON('../data/people/sunyunlian.json', function (data) {
+            var i =
+                '<img style="position:absolute; top:10px; left:10px; width: 200px; height:260px;" src="'
+            i += data[0].img + '">';
+            i += '<div class="intro"><p>' + data[0].intro +
+            '<a href="#"> English Version</a></p></div>';
+
+            $('#result1').append(i);
+        });
+
+
+        $.getJSON('../data/people/publications/sunyunlian.json', function (data) {
+            var p = ' <p style="font-size: 22px; padding: 30px 0;">部分论文</p>';
+            $.each(data, function (i, n) {
+                p += '<li style="padding-bottom:20px;">' + n["content"] + '</li>'
+
+            });
+
+            $('#result2').append(p);
+
+        });
+
+        $.getJSON('../data/people/grants/sunyunlian.json', function (data) {
+            var g = ' <p style="font-size: 22px; padding: 30px 0;">项目</p>';
+            $.each(data, function (i, n) {
+                g += '<li style="padding-bottom:20px;">' + n["content"] + '</li>'
+
+            });
+
+            $('#result3').append(g);
+
+        });
+
+
+        return false;
+    });
+</script>
+
+
+</html>
