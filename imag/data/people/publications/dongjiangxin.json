@@ -1,0 +1,11 @@
+[
+    {
+		"id": "1",
+		"content": "Deep outlier handling for image deblurring. Jiangxin Dong, Jinshan Pan. (IEEE Transactions on image processing) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "Deep wiener deconvolution: Wiener meets deep learning for image deblurring. Jiangxin Dong, Stefan Roth, Bernt Schiele. (Advances in Neural Information Processing Systems) .第一作者"
+	}
+
+]

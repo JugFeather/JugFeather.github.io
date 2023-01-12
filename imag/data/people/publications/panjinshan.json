@@ -1,0 +1,47 @@
+[
+    {
+		"id": "1",
+		"content": "Learning to deblur images with exemplars. Jinshan Pan, Wenqi Ren, Zhe Hu, Ming-Hsuan Yang. (IEEE transactions on pattern analysis and machine intelligence) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "Gated fusion network for single image dehazing. Wenqi Ren, Lin Ma, Jiawei Zhang, Jinshan Pan, Xiaochun Cao, Wei Liu, Ming-Hsuan Yang. (Proceedings of the IEEE conference on computer vision and pattern recognition) .其他作者"
+	},
+    {
+		"id": "3",
+		"content": "Dynamic scene deblurring using spatially variant recurrent neural networks. Jiawei Zhang, Jinshan Pan, Jimmy Ren, Yibing Song, Linchao Bao, Rynson Lau, Ming-Hsuan Yang. (Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition) .共同一作"
+	},
+    {
+		"id": "4",
+		"content": "Lstm pose machines. Yue Luo, Jimmy Ren, Zhouxia Wang, Wenxiu Sun, Jinshan Pan, Jianbo Liu, Jiahao Pang, Liang Lin. (Proceedings of the IEEE conference on computer vision and pattern recognition) .其他作者"
+	},
+    {
+		"id": "5",
+		"content": "Learning data terms for non-blind deblurring. Jiangxin Dong, Jinshan Pan, Deqing Sun, Zhixun Su, Ming-Hsuan Yang. (Proceedings of the European Conference on Computer Vision (ECCV)) .第一作者"
+	},
+    {
+		"id": "6",
+		"content": "Physics-based feature dehazing networks. Jiangxin Dong, Jinshan Pan. (European Conference on Computer Vision) .通讯作者"
+	},
+    {
+		"id": "7",
+		"content": "Self-guided image dehazing using progressive feature fusion. Haoran Bai, Jinshan Pan, Xinguang Xiang, Jinhui Tang. (IEEE Transactions on Image Processing) .共同一作"
+	},
+    {
+		"id": "8",
+		"content": "Learning dual convolutional neural networks for low-level vision. Jinshan Pan, Sifei Liu, Deqing Sun, Jiawei Zhang, Yang Liu, Jimmy Ren, Zechao Li, Jinhui Tang, Huchuan Lu, Yu-Wing Tai, others. (Proceedings of the IEEE conference on computer vision and pattern recognition) .第一作者"
+	},
+    {
+		"id": "9",
+		"content": "Single image dehazing via conditional generative adversarial network. Runde Li, Jinshan Pan, Zechao Li, Jinhui Tang. (Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition) .共同一作"
+	},
+    {
+		"id": "10",
+		"content": "Learning a discriminative prior for blind image deblurring. Lerenhan Li, Jinshan Pan, Wei-Sheng Lai, Changxin Gao, Nong Sang, Ming-Hsuan Yang. (Proceedings of the IEEE conference on computer vision and pattern recognition) .共同一作"
+	},
+    {
+		"id": "11",
+		"content": "Motion blur kernel estimation via deep learning. Xiangyu Xu, Jinshan Pan, Yu-Jin Zhang, Ming-Hsuan Yang. (IEEE Transactions on Image Processing) .共同一作"
+	}
+
+]

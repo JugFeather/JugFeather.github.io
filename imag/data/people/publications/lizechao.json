@@ -1,0 +1,39 @@
+[
+    {
+		"id": "1",
+		"content": "CTNet: Context-based Tandem Network for Semantic Segmentation. Zechao Li, Yanpeng Sun, Liyan Zhang, Jinhui Tang. (IEEE Trans. on Pattern Analysis and Machine Intelligence (TPAMI)) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "Weakly-supervised semantic guided hashing for social image retrieval. Zechao Li, Jinhui Tang, Liyan Zhang, Jian Yang. (International Journal of Computer Vision) .第一作者"
+	},
+    {
+		"id": "3",
+		"content": "Deep collaborative embedding for social image understanding. Zechao Li, Jinhui Tang, Tao Mei. (IEEE transactions on pattern analysis and machine intelligence) .第一作者"
+	},
+    {
+		"id": "4",
+		"content": "Robust structured subspace learning for data representation. Zechao Li, Jing Liu, Jinhui Tang, Hanqing Lu. (IEEE transactions on pattern analysis and machine intelligence) .第一作者"
+	},
+    {
+		"id": "5",
+		"content": "Robust structured nonnegative matrix factorization for image representation. Zechao Li, Jinhui Tang, Xiaofei He. (IEEE transactions on neural networks and learning systems) .第一作者"
+	},
+    {
+		"id": "6",
+		"content": "Weakly supervised deep matrix factorization for social image understanding. Zechao Li, Jinhui Tang. (IEEE Transactions on Image Processing) .第一作者"
+	},
+    {
+		"id": "7",
+		"content": "Multimedia news summarization in search. Zechao Li, Jinhui Tang, Xueming Wang, Jing Liu, Hanqing Lu. (ACM Transactions on Intelligent Systems and Technology (TIST)) .第一作者"
+	},
+    {
+		"id": "8",
+		"content": "Unsupervised feature selection via nonnegative spectral analysis and redundancy control. Zechao Li, Jinhui Tang. (IEEE Transactions on Image Processing) .第一作者"
+	},
+    {
+		"id": "9",
+		"content": "Clustering-guided sparse structural learning for unsupervised feature selection. Zechao Li, Jing Liu, Yi Yang, Xiaofang Zhou, Hanqing Lu. (IEEE Transactions on Knowledge and Data Engineering) .第一作者"
+	}
+
+]

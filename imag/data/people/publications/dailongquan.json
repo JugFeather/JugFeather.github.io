@@ -1,0 +1,43 @@
+[
+    {
+		"id": "1",
+		"content": "Depth map upsampling using compressive sensing based model. Longquan Dai, Haoxing Wang, Xiaopeng Zhang. (Neurocomputing) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "Accelerate bilateral filter using Hermite polynomials. Longquan Dai, Mengke Yuan, Xiaopeng Zhang. (Electronics Letters) .第一作者"
+	},
+    {
+		"id": "3",
+		"content": "Fast minimax path-based joint depth interpolation. Longquan Dai, Feihu Zhang, Xing Mei, Xiaopeng Zhang. (IEEE Signal Processing Letters) .第一作者"
+	},
+    {
+		"id": "4",
+		"content": "Optimal fitting polynomial for linear time bilateral filters. Longquan Dai, Mengke Yuan, Xiaopeng Zhang. (Electronics Letters) .第一作者"
+	},
+    {
+		"id": "5",
+		"content": "Speeding up the bilateral filter: A joint acceleration way. Longquan Dai, Mengke Yuan, Xiaopeng Zhang. (IEEE Transactions on Image Processing) .第一作者"
+	},
+    {
+		"id": "6",
+		"content": "Joint depth map interpolation and segmentation with planar surface model. Shibiao Xu, Longquan Dai, Jiguang Zhang, Jinhui Tang, G Kumar, Yanning Zhang, Xiaopeng Zhang. () .其他作者"
+	},
+    {
+		"id": "7",
+		"content": "Designing by training: acceleration neural network for fast high-dimensional convolution. Longquan Dai, Liang Tang, Yuan Xie, Jinhui Tang. (Advances in Neural Information Processing Systems) .第一作者"
+	},
+    {
+		"id": "8",
+		"content": "Hyper-Laplacian regularized multilinear multiview self-representations for clustering and semisupervised learning. Yuan Xie, Wensheng Zhang, Yanyun Qu, Longquan Dai, Dacheng Tao. (IEEE transactions on cybernetics) .其他作者"
+	},
+    {
+		"id": "9",
+		"content": "基于图像分解和区域分割的数字图像修复水. 沈民奋, 陈家亮, 代龙泉, 李斌. (电子测量与仪器学报) .其他作者"
+	},
+    {
+		"id": "10",
+		"content": "基于遗传最小二乘小波支持向量机的分类研究. Longquan Dai, 代龙泉, Jialiang Huang, 黄嘉亮, Min Shen, 沈民奋. (中国人工智能学会学术年会) .第一作者"
+	}
+
+]

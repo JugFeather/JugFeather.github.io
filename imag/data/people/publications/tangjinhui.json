@@ -1,0 +1,43 @@
+[
+    {
+		"id": "1",
+		"content": "Coherence constrained graph LSTM for group activity recognition. Jinhui Tang, Xiangbo Shu, Rui Yan, Liyan Zhang. (IEEE transactions on pattern analysis and machine intelligence) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "Hierarchical long short-term concurrent memory for human interaction recognition. Xiangbo Shu, Jinhui Tang, Guo-Jun Qi, Wei Liu, Jian Yang. (IEEE transactions on pattern analysis and machine intelligence) .其他作者"
+	},
+    {
+		"id": "3",
+		"content": "Deep collaborative embedding for social image understanding. Zechao Li, Jinhui Tang, Tao Mei. (IEEE transactions on pattern analysis and machine intelligence) .其他作者"
+	},
+    {
+		"id": "4",
+		"content": "Social anchor-unit graph regularized tensor completion for large-scale image retagging. Jinhui Tang, Xiangbo Shu, Zechao Li, Yu-Gang Jiang, Qi Tian. (IEEE transactions on pattern analysis and machine intelligence) .第一作者"
+	},
+    {
+		"id": "5",
+		"content": "Show, reward, and tell: Adversarial visual story generation. Jinhui Tang, Jing Wang, Zechao Li, Jianlong Fu, Tao Mei. (ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM)) .第一作者"
+	},
+    {
+		"id": "6",
+		"content": "Discriminative deep quantization hashing for face image retrieval. Jinhui Tang, Jie Lin, Zechao Li, Jian Yang. (IEEE transactions on neural networks and learning systems) .第一作者"
+	},
+    {
+		"id": "7",
+		"content": "Personalized age progression with bi-level aging dictionary learning. Jinhui Tang, Zechao Li, Hanjiang Lai, Liyan Zhang, Shuicheng Yan, others. (IEEE transactions on pattern analysis and machine intelligence) .第一作者"
+	},
+    {
+		"id": "8",
+		"content": "Tri-clustered tensor completion for social-aware image tag refinement. Jinhui Tang, Xiangbo Shu, Guo-Jun Qi, Zechao Li, Meng Wang, Shuicheng Yan, Ramesh Jain. (IEEE transactions on pattern analysis and machine intelligence) .第一作者"
+	},
+    {
+		"id": "9",
+		"content": "Generalized deep transfer networks for knowledge propagation in heterogeneous domains. Jinhui Tang, Xiangbo Shu, Zechao Li, Guo-Jun Qi, Jingdong Wang. () .第一作者"
+	},
+    {
+		"id": "10",
+		"content": "Neighborhood discriminant hashing for large-scale image retrieval. Jinhui Tang, Zechao Li, Meng Wang, Ruizhen Zhao. (IEEE Transactions on Image Processing) .第一作者"
+	}
+
+]

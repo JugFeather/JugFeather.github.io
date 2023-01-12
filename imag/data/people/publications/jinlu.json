@@ -1,0 +1,31 @@
+[
+    {
+		"id": "1",
+		"content": "Deep Semantic-Preserving Ordinal Hashing for Cross-Modal Similarity Search. Lu Jin, Kai Li, Zechao Li, Fu Xiao, Guo-Jun Qi, Jinhui Tang. (IEEE transactions on neural networks and learning systems) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "Semantic neighbor graph hashing for multimodal retrieval. Lu Jin, Kai Li, Hao Hu, Guo-Jun Qi, Jinhui Tang. (IEEE Transactions on Image Processing) .第一作者"
+	},
+    {
+		"id": "3",
+		"content": "Deep ordinal hashing with spatial attention. Lu Jin, Xiangbo Shu, Kai Li, Zechao Li, Guo-Jun Qi, Jinhui Tang. (IEEE Transactions on Image Processing) .第一作者"
+	},
+    {
+		"id": "4",
+		"content": "Partially Common-Semantic Pursuit for RGB-D Object Recognition. Lu Jin, Zechao Li, Xiangbo Shu, Shenghua Gao, Jinhui Tang. (ACM Multimedia) .第一作者"
+	},
+    {
+		"id": "5",
+		"content": "RGB-D Object Recognition via Incorporating Latent Data Structure and Prior Knowledge. Jinhui Tang, Lu Jin, Zechao Li, Shenghua Gao. (IEEE) .第一作者"
+	},
+    {
+		"id": "6",
+		"content": "Hand-Crafted Features or Machine Learnt Features? Together They Improve RGB-D Object Recognition. Lu Jin, Shenghua Gao, Zechao Li, Jinhui Tang. (IEEE International Symposium on Multimedia (ISM)) .第一作者"
+	},
+    {
+		"id": "7",
+		"content": "Deep hashing with multilevel similarity learning for multimedia similarity search. Lu Jin, Qiuli Liu, Zechao Li. (Proceedings of the 10th International Conference on Internet Multimedia Computing and Service) .第一作者"
+	}
+
+]

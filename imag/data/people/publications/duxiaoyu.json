@@ -1,0 +1,43 @@
+[
+    {
+		"id": "1",
+		"content": "Invariant Representation Learning for Multimedia Recommendation. Xiaoyu Du, Zike Wu, Fuli Feng, Xiangnan He, Jinhui Tang. (Proceedings of the 30th ACM International Conference on Multimedia) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "How to learn item representation for cold-start multimedia recommendation?. Xiaoyu Du, Xiang Wang, Xiangnan He, Zechao Li, Jinhui Tang, Tat-Seng Chua. (Proceedings of the 28th ACM International Conference on Multimedia) .第一作者"
+	},
+    {
+		"id": "3",
+		"content": "Modeling embedding dimension correlations via convolutional neural collaborative filtering. Xiaoyu Du, Xiangnan He, Fajie Yuan, Jinhui Tang, Zhiguang Qin, Tat-Seng Chua. (ACM Transactions on Information Systems (TOIS)) .第一作者"
+	},
+    {
+		"id": "4",
+		"content": "Wheel: Accelerating cnns with distributed gpus via hybrid parallelism and alternate strategy. Xiaoyu Du, Jinhui Tang, Zechao Li, Zhiguang Qin. (Proceedings of the 25th ACM international conference on Multimedia) .第一作者"
+	},
+    {
+		"id": "5",
+		"content": "Learning to match on graph for fashion compatibility modeling. Xun Yang, Xiaoyu Du, Meng Wang. (Proceedings of the AAAI Conference on Artificial Intelligence) .共同一作"
+	},
+    {
+		"id": "6",
+		"content": "Progressive image enhancement under aesthetic guidance. Xiaoyu Du, Xun Yang, Zhiguang Qin, Jinhui Tang. (Proceedings of the 2019 on International Conference on Multimedia Retrieval) .第一作者"
+	},
+    {
+		"id": "7",
+		"content": "Adversarial personalized ranking for recommendation. Xiangnan He, Zhankui He, Xiaoyu Du, Tat-Seng Chua. (The 41st International ACM SIGIR Conference on Research & Development in Information Retrieval) .其他作者"
+	},
+    {
+		"id": "8",
+		"content": "Design of Automata Online Judge. Xiaoyu Du, Chao Yi, Yu Wei, Su Feng, Zhi Gong. (2010 2nd International Conference on Information Engineering and Computer Science) .第一作者"
+	},
+    {
+		"id": "9",
+		"content": "Autonomic learning in Course Software: A case study. Xiaoyu Du, Chao Yi, Su Feng, Yu Wei, Qiao Tang. (2010 International Conference on Computer Application and System Modeling (ICCASM 2010)) .第一作者"
+	},
+    {
+		"id": "10",
+		"content": "The Design of Course-Oriented Online Judge. Chao Yi, Xiaoyu Du, Su Feng, Si Li, Yue Zhuo. (Advanced Materials Research) .其他作者"
+	}
+
+]

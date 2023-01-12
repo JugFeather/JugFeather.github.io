@@ -1,0 +1,51 @@
+[
+    {
+		"id": "1",
+		"content": "Color face recognition by PCA-like approach. Xinguang Xiang, Jing Yang, Qiuping Chen. (Neurocomputing) .第一作者"
+	},
+    {
+		"id": "2",
+		"content": "Local Similarity based Discriminant Analysis for Face Recognition. Xinguang Xiang, Fan Liu, Ye Bi, Yanfang Wang, Jinhui Tang. (KSII Transactions on Internet and Information Systems (TIIS)) .第一作者"
+	},
+    {
+		"id": "3",
+		"content": "A joint encoder--decoder error control framework for stereoscopic video coding. Xinguang Xiang, Debin Zhao, Qiang Wang, Siwei Ma, Wen Gao. (Journal of Visual Communication and Image Representation) .第一作者"
+	},
+    {
+		"id": "4",
+		"content": "Tracking the evolution of overlapping communities in dynamic social networks. Zhixiao Wang, Zechao Li, Guan Yuan, Yunlian Sun, Xiaobin Rui, Xinguang Xiang. (Knowledge-Based Systems) .通讯作者"
+	},
+    {
+		"id": "5",
+		"content": "Light-field depth estimation via epipolar plane image analysis and locally linear embedding. Yongbing Zhang, Huijin Lv, Yebin Liu, Haoqian Wang, Xingzheng Wang, Qian Huang, Xinguang Xiang, Qionghai Dai. (IEEE Transactions on Circuits and Systems for Video Technology) .其他作者"
+	},
+    {
+		"id": "6",
+		"content": "Packet video error concealment with auto regressive model. Yongbing Zhang, Xinguang Xiang, Debin Zhao, Siwe Ma, Wen Gao. (IEEE Transactions on Circuits and Systems for Video Technology) .其他作者"
+	},
+    {
+		"id": "7",
+		"content": "A Novel Action Recognition Scheme Based on Spatial-Temporal Pyramid Model. Hengying Zhao, Xinguang Xiang. (Pacific Rim Conference on Multimedia) .通讯作者"
+	},
+    {
+		"id": "8",
+		"content": "Haze Removal Technology Based on Physical Model. Yunqian Cui, Xinguang Xiang. (Pacific Rim Conference on Multimedia) .通讯作者"
+	},
+    {
+		"id": "9",
+		"content": "A novel error concealment method for stereoscopic video coding. Xinguang Xiang, Debin Zhao, Qiang Wang, Xiangyang Ji, Wen Gao. (2007 IEEE international conference on image processing) .第一作者"
+	},
+    {
+		"id": "10",
+		"content": "Auto-regressive model based error concealment scheme for stereoscopic video coding. Xinguang Xiang, Debin Zhao, Siwei Ma, Wen Gao. (2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)) .第一作者"
+	},
+    {
+		"id": "11",
+		"content": "Sub-region localized hashing for fine-grained image retrieval. Xinguang Xiang, Yajie Zhang, Lu Jin, Zechao Li, Jinhui Tang. (IEEE Transactions on Image Processing) .第一作者"
+	},
+    {
+		"id": "12",
+		"content": "Deep video deblurring using sharpness features from exemplars. Xinguang Xiang, Hao Wei, Jinshan Pan. (IEEE Transactions on Image Processing) .第一作者"
+	}
+
+]
