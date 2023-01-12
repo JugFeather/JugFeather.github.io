@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Welcome to IMAG</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 1280px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--第一部分-->
+
+        <div class="top_image nav">
+
+            <ul>
+                <li class="logo"><a href="home.html"><img class="logo" src="./images/logo.png"></a></li>
+
+                <li><a class="home list" href="home.html">Home</a></li>
+                <li><a class="list" href="people.html">People</a></li>
+                <li><a class="list" href="news.html">News</a></li>
+                <li><a class="list" href="publications.html">Publications</a></li>
+                <li><a class="list" href="competitions.html">Competitions</a></li>
+                <li><a class="list" href="grants.html">Grants</a></li>
+                <li><a class="list" href="resources.html">Resources</a></li>
+                <li><a class="list" href="contact.html">Contact</a></li>
+            </ul>
+
+            <p class="title1.1">IMAG</p>
+            <p class="title1.2">Intelligent Media Analysis Group</p>
+            <div class="vector"></div>
+            <p class="title1.3 type"></p>
+
+            <button class="custom-btn btn-11 btn1"><a href="people.html">Learn More</a></button>
+        </div>
+    
+
+    <!--第二部分-->
+    <div class="background1">
+        <p class="title2">LATEST <span>NEWS</span></p>
+        <div class="vector2"></div>
+
+        <div id="result1"></div>
+        <button class="btn3"><a href="news.html">More -></a></button>
+    
+    </div>
+
+    <!--第三部分-->
+    <div class="background2">
+        <p class="title3">RECENT RESEARCH</p>
+
+        <div id="result2"></div>
+        <button class="btn4"><a href="publications.html">More-></a> </button>
+
+    </div>
+
+
+    <!--第四部分-->
+    <div class="background1">
+        <p class="title4">LATEST <span>COMPETITIONS</span></p>
+        <div class="vector5"></div>
+
+        <div id="result3"></div>
+        <button class="btn5"><a href="competitions.html">
+                More -></a>
+        </button>
+
+    </div>
+
+
+    <!--底部-->
+    <div class="footer footer1">
+        <p>Copyright © 2022 南京理工大学智能媒体分析实验室. All rights reserved.</p>
+    </div>
+
+
+
+</body>
+
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+
+        $.getJSON('./data/newsList.json', function (data) {
+            var news = '<div class="box1">';
+
+            news += '<img class="news_image" src="' + data[0].img + '">' +
+                '<div class="news_content"></div>' +
+                '<p class="news_title">' + data[0].title + '</p>' +
+                '<p class="news">' + data[0].content + '</p>' +
+                '<button class="btn2"><a href="news.html">more-></a> </button>' +
+                '</div>';
+
+            news += '<div class="box2">' +
+                '<img class="news_image" src="' + data[1].img + '">' +
+                '<div class="news_content"></div>' +
+                '<p class="news_title">' + data[1].title + '</p>' +
+                '<p class="news">' + data[1].content + '</p>' +
+                '<button class="btn2"><a href="news.html">more-></a> </button>' +
+                '</div>';
+
+            news += '<div class="box3">' +
+                '<img class="news_image" src="' + data[2].img + '">' +
+                '<div class="news_content"></div>' +
+                '<p class="news_title">' + data[2].title + '</p>' +
+                '<p class="news">' + data[2].content + '</p>' +
+                '<button class="btn2"><a href="news.html">more-></a> </button>' +
+                '</div>';
+
+
+            $('#result1').append(news);
+
+        });
+
+
+        $.getJSON('./data/newsList.json', function (data) {
+            var research = '<div class="box_shadow">';
+
+            research += '<img src="./images/4(1).png" class="R_img1">' + '</div>';
+            research += '<div><p class="R_title">' + data[0].title + '</p>';
+            research += '<div class="vector3"></div>';
+            research += '<p class="date1">' + data[0].date + '</p>' + '</div>';
+            research += ' <p class="R">' + data[0].content + '</p>';
+
+            research += '<div class="box3.0">';
+            research += '<div class="box3.1">';
+            research += '<div class="box_shadow3.1"> <img src="./images/3(1).png" class="R_img2"></div>';
+            research += '<p class="R_title2">' + data[1].title +
+                '</p> <div class="vector4"></div><p class="date2">' + data[1].date + '</p></div>';
+
+            research += '<div class="box3.2">';
+            research += '<div class="box_shadow3.1"> <img src="./images/3(1).png" class="R_img2"></div>';
+            research += '<p class="R_title2">' + data[2].title +
+                '</p> <div class="vector4"></div><p class="date2">' + data[2].date + '</p></div>';
+
+            research += '<div class="box3.3">';
+            research += '<div class="box_shadow3.1"> <img src="./images/3(1).png" class="R_img2"></div>';
+            research += '<p class="R_title2">' + data[3].title +
+                '</p><div class="vector4"></div><p class="date2">' + data[3].date + '</p></div>';
+            research += '</div>';
+
+
+            $('#result2').append(research);
+
+        });
+
+
+
+        $.getJSON('./data/competitions.json', function (data) {
+            var c = '<div class="box4.1">';
+            c += '<div class="compe_content"></div>';
+            c += ' <p class="compe_title">' + data[0].prize + '</p>';
+            c += '<p class="compe">' + data[0].name + '</p>';
+            c += '<div class="img-box"><div class="box_shadow4.1"><img class="compe_image" src="' + data[0].img + '"></div></div>';
+            c += '</div>';
+
+
+            c += '<div class="box4.2">';
+            c += '<div class="compe_content"></div>';
+            c += ' <p class="compe_title">' + data[1].prize + '</p>';
+            c += '<p class="compe">' + data[1].name + '</p>';
+            c += '<div class="img-box"><div class="box_shadow4.1"><img class="compe_image" src="' + data[1].img + '"></div></div>';
+            c += '</div>';
+
+            c += '<div class="box4.3">';
+            c += '<div class="compe_content"></div>';
+            c += ' <p class="compe_title">' + data[2].prize + '</p>';
+            c += '<p class="compe">' + data[2].name + '</p>';
+            c += '<div class="img-box"><div class="box_shadow4.1"><img class="compe_image" src="' + data[2].img + '"></div></div>';
+            c += '</div>';
+
+
+            $('#result3').append(c);
+
+        });
+
+
+
+        return false;
+    });
+
+
+    var typed = new Typed('.type', {
+        strings: [
+            "Welcome to Intelligent Media Analysis Group (IMAG) in School of Computer Science,Nanjing University of Science and Technology!"
+        ],
+        typeSpeed: 30
+    });
+</script>
+
+</html>
